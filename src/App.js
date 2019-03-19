@@ -28,7 +28,7 @@ class App extends Component {
     });
   };
   componentDidMount() {
-    fetch("http://10.0.1.13:8000/api/")
+    fetch("http://10.0.1.13:8000/api/cat/")
       .then(res => res.json())
       .then(json => {
         this.setState({ data: json });
