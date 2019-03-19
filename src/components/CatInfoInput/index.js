@@ -3,16 +3,16 @@ import "./styles.css";
 import Select from "react-select";
 
 // 야옹이 상태 옵션들
-// let options = [
-//   { value: "3.0", label: "임신묘 or 4개월 미만 아기야옹이" }
-//   { value: "2.5", label: "4~6개월의 아기야옹이" },
-//   { value: "2.0", label: "7~12개월의 아기야옹이" },
-//   { value: "1.6", label: "운동량이 많고 활발한 다 큰 야옹이" },
-//   { value: "1.4", label: "중성화 하지 않은 다 큰 야옹이" },
-//   { value: "1.2", label: "중성화 한 다 큰 고양이" },
-//   { value: "1.0", label: "적정 체중의 야옹이" },
-//   { value: "0.8", label: "체중 감량이 필요한 야옹이" }
-// ];
+let options = [
+  { value: "3.0", label: "임신묘 or 4개월 미만 아기야옹이" },
+  { value: "2.5", label: "4~6개월의 아기야옹이" },
+  { value: "2.0", label: "7~12개월의 아기야옹이" },
+  { value: "1.6", label: "운동량이 많고 활발한 다 큰 야옹이" },
+  { value: "1.4", label: "중성화 하지 않은 다 큰 야옹이" },
+  { value: "1.2", label: "중성화 한 다 큰 고양이" },
+  { value: "1.0", label: "적정 체중의 야옹이" },
+  { value: "0.8", label: "체중 감량이 필요한 야옹이" }
+];
 
 class CatInfoInput extends Component {
   state = {
@@ -22,9 +22,7 @@ class CatInfoInput extends Component {
     selectedOption: "",
     mealKcal: "",
     selectedBorder: "solid 1px #efefef",
-    visible: "visible",
-    data: [],
-    options: []
+    visible: "visible"
   };
 
   setValue = value => {
@@ -110,27 +108,9 @@ class CatInfoInput extends Component {
       }
     }
   };
-  componentDidMount() {
-    fetch("http://10.0.1.13:8000/api/cat/status/")
-      .then(res => res.json())
-      .then(data => {
-        const datalist = data.map(item => {
-          return { label: item.title, value: item.value };
-        });
-        this.setState({
-          options: datalist
-        });
-      });
-  }
+
   render() {
-    const {
-      catName,
-      catWeight,
-      catAge,
-      mealKcal,
-      select,
-      options
-    } = this.state;
+    const { catName, catWeight, catAge, mealKcal, select } = this.state;
     //야옹이 상태 스타일 커스텀
     const customStyles = {
       container: styles => ({
@@ -176,7 +156,6 @@ class CatInfoInput extends Component {
         color: "#c3c3c3"
       })
     };
-    console.log(options);
     return (
       <>
         <form onSubmit={this.handleClick}>

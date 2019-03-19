@@ -12,8 +12,7 @@ class App extends Component {
     selectedOption: "",
     mealKcal: "",
     dayMeal: "",
-    visible: "invisible",
-    data: []
+    visible: "invisible"
   };
 
   handleCreate = data => {
@@ -27,23 +26,10 @@ class App extends Component {
       visible: "visible"
     });
   };
-  componentDidMount() {
-    fetch("http://10.0.1.13:8000/api/cat/")
-      .then(res => res.json())
-      .then(json => {
-        this.setState({ data: json });
-      });
-  }
   render() {
-    const { data } = this.state;
-    let list = [];
-    if (data) {
-      list = data.map((item, idx) => <DayMeal catName={item.name} key={idx} />);
-    }
     return (
       <div>
         <Header />
-        {list}
         <CatInfoInput onCreate={this.handleCreate} />
       </div>
     );
