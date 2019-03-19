@@ -1,0 +1,152 @@
+.catInfo {
+  width: 320px;
+  margin: auto;
+  padding-top: 35px;
+}
+
+.row {
+  height: 37px;
+  display: flex;
+  margin-bottom: 18px;
+}
+
+label {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: #626262;
+}
+
+.inputStyle {
+  height: 37px;
+  margin-left: 15px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  background-color: #fff;
+  color: #626262;
+  border-radius: 10px;
+  border: solid 1px #efefef;
+  box-shadow: 0 0 0 1px #3991ff;
+  transition: all 100ms;
+  -webkit-box-shadow: none;
+}
+
+.inputStyle:focus {
+  border: solid 1px #3991ff;
+}
+
+.inputStyle:hover {
+  border: solid 1px #b3b3b3;
+}
+
+.warnInputStyle {
+  height: 37px;
+  margin-left: 15px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  background-color: #fff;
+  color: #626262;
+  border-radius: 10px;
+  border: solid 1px #ff822f;
+  box-shadow: 0 0 0 1px #3991ff;
+  transition: all 100ms;
+  -webkit-box-shadow: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+::placeholder {
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  color: #d4d4d4;
+}
+
+.catName {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weightAndAge {
+  width: 320px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.catWeight input {
+  width: 70px;
+}
+
+.alignRight ::placeholder {
+  text-align: right;
+}
+
+.catAge input {
+  width: 70px;
+}
+
+.catStatus {
+  width: 320px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selectBox {
+  margin-left: 20px;
+}
+
+.mealKcal {
+  width: 320px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mealKcal input {
+  width: 146px;
+}
+
+.mealKcal ::placeholder {
+  text-align: right;
+}
+
+.mealKcal span {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: #626262;
+}
+
+.submitButton {
+  text-align: center;
+}
+
+button {
+  width: 120px;
+  height: 32px;
+  border-radius: 16px;
+  border-color: #3991ff;
+  background-color: #3991ff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 80px;
+}
+
+button:focus {
+  outline: none;
+}
