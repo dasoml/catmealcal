@@ -7,22 +7,18 @@ import DayMeal from "./components/DayMeal/index";
 class App extends Component {
   state = {
     catName: "",
-    catWeight: "",
-    catAge: "",
-    selectedOption: "",
-    mealKcal: "",
     dayMeal: "",
     visible: "invisible"
   };
 
   handleCreate = data => {
-    this.setState(data);
-    const { catWeight, mealKcal, selectedOption } = this.state;
+    const { catName, catWeight, mealKcal, selectedOption } = data;
     const RER = 30 * catWeight + 70;
     const DER = RER * selectedOption;
-    const dayMealgram = (DER * 1000) / mealKcal;
+    const dayMeal = (DER * 1000) / mealKcal;
     this.setState({
-      dayMeal: dayMealgram,
+      catName,
+      dayMeal,
       visible: "visible"
     });
   };
@@ -30,6 +26,11 @@ class App extends Component {
     return (
       <div>
         <Header />
+        <DayMeal
+          visible={this.state.visible}
+          catName={this.state.catName}
+          dayMeal={this.state.dayMeal}
+        />
         <CatInfoInput onCreate={this.handleCreate} />
       </div>
     );

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import "./styles.css";
 
 class DayMeal extends Component {
   render() {
     return (
-      <div>
+      <div className={this.props.visible}>
         <hr />
         <div>
           <span>{this.props.catName}</span>는 하루에

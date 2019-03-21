@@ -3,7 +3,7 @@ import "./styles.css";
 import Select from "react-select";
 
 // 야옹이 상태 옵션들
-let options = [
+const options = [
   { value: "3.0", label: "임신묘 or 4개월 미만 아기야옹이" },
   { value: "2.5", label: "4~6개월의 아기야옹이" },
   { value: "2.0", label: "7~12개월의 아기야옹이" },
@@ -20,18 +20,10 @@ class CatInfoInput extends Component {
     catWeight: "",
     catAge: "",
     selectedOption: "",
-    mealKcal: "",
     selectedBorder: "solid 1px #efefef",
-    visible: "visible"
-  };
-
-  setValue = value => {
-    this.setState(prevState => ({
-      select: {
-        ...prevState.select,
-        value
-      }
-    }));
+    mealKcal: "",
+    dayMeal: "",
+    visible: "invisible"
   };
 
   // 몸무게, 나이, 칼로리 숫자와 컴마만 입력. 그렇지 않으면 warnInputStyle
@@ -76,18 +68,6 @@ class CatInfoInput extends Component {
     ) {
       // 입력길이가 0 이상일때 부모에게로 state값 전달
       this.props.onCreate(this.state);
-      // state 초기화
-      this.setState({
-        catName: "",
-        catWeight: "",
-        catAge: "",
-        selectedOption: null,
-        mealKcal: "",
-        dayMeal: "",
-        selectedBorder: "solid 1px #efefef"
-      });
-      // 확인하기 누르면 야옹이 상태 인풋 초기화!!!!!! select... 가 나오게
-      this.setValue(null);
     } else {
       // 입력 칸 길이 0 이상이 아닐때
       alert("빈칸을 모두 입력해주세요");
@@ -110,7 +90,7 @@ class CatInfoInput extends Component {
   };
 
   render() {
-    const { catName, catWeight, catAge, mealKcal, select } = this.state;
+    const { catName, catWeight, catAge, mealKcal } = this.state;
     //야옹이 상태 스타일 커스텀
     const customStyles = {
       container: styles => ({
