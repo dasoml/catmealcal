@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header/";
 import CatInfoInput from "./components/CatInfoInput/index";
 import DayMeal from "./components/DayMeal/index";
+import DetailInfo from "./components/DetailInfo/index";
 
 class App extends Component {
   state = {
@@ -32,6 +33,7 @@ class App extends Component {
           dayMeal={this.state.dayMeal}
         />
         <CatInfoInput onCreate={this.handleCreate} />
+        <DetailInfo visible={this.state.visible} />
       </div>
     );
   }
