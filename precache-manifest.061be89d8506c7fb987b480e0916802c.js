@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "422f39e537f8fd3f9906",
+    "revision": "8c3cf76bc4d54a321ae5",
     "url": "/catmealcal/static/css/main.fb9e853b.chunk.css"
   },
   {
-    "revision": "422f39e537f8fd3f9906",
-    "url": "/catmealcal/static/js/main.50858052.chunk.js"
+    "revision": "8c3cf76bc4d54a321ae5",
+    "url": "/catmealcal/static/js/main.b59e5821.chunk.js"
   },
   {
     "revision": "621a76a907798ec57d78",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/catmealcal/static/js/2.2c811a6b.chunk.js"
   },
   {
-    "revision": "2cb73281f2ad11004588714877c3cc0a",
+    "revision": "ec5119622ee6870b3d7a9416a8355ebc",
     "url": "/catmealcal/index.html"
   }
 ];
