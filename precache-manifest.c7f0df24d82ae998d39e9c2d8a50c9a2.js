@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/catmealcal/static/js/2.2c811a6b.chunk.js"
   },
   {
-    "revision": "619a6f4afd46a3e17befeff59f0437d4",
+    "revision": "2cb73281f2ad11004588714877c3cc0a",
     "url": "/catmealcal/index.html"
   }
 ];
